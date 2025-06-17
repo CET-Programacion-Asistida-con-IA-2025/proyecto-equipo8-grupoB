@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FuturoLaboral - Tu primer paso al mundo profesional</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-rocket"></i>
+                <span>FuturoLaboral</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#inicio" class="nav-link">Inicio</a></li>
+                <li><a href="#servicios" class="nav-link">Servicios</a></li>
+                <li><a href="#cursos" class="nav-link">Cursos</a></li>
+                <li><a href="#testimonios" class="nav-link">Testimonios</a></li>
+                <li><a href="#contacto" class="nav-link">Contacto</a></li>
+ 
+  </ul>
+</li>
+
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">Tu primer paso al mundo profesional</h1>
+                <p class="hero-subtitle">Descubre tu vocación, desarrolla tus habilidades y consigue tu primer empleo con nuestra plataforma integral de orientación laboral.</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="openModal('orientacion')">
+                        <i class="fas fa-compass"></i>
+                        Orientación Vocacional
+                    </button>
+                    <button class="btn btn-secondary" onclick="openModal('cv')">
+                        <i class="fas fa-file-alt"></i>
+                        Crear CV
+                    </button>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="floating-card">
+                    <i class="fas fa-user-graduate"></i>
+                    <span>Más de 10,000 jóvenes ya encontraron su camino</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servicios" class="services">
+        <div class="container">
+            <h2 class="section-title">Nuestros Servicios</h2>
+            <div class="services-grid">
+                <div class="service-card" onclick="openModal('orientacion')">
+                    <div class="service-icon">
+                        <i class="fas fa-compass"></i>
+                    </div>
+                    <h3>Orientación Vocacional</h3>
+                    <p>Descubre tu vocación con nuestra IA especializada que analiza tus intereses y habilidades.</p>
+                    <button class="service-btn">Comenzar Test</button>
+                </div>
+
+                <div class="service-card" onclick="openModal('cursos')">
+                    <div class="service-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Cursos Gratuitos</h3>
+                    <p>Accede a más de 50 cursos especializados para desarrollar las habilidades más demandadas.</p>
+                    <button class="service-btn">Ver Cursos</button>
+                </div>
+
+                <div class="service-card" onclick="openModal('cv')">
+                    <div class="service-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h3>Generador de CV</h3>
+                    <p>Crea CVs profesionales con plantillas modernas y consejos personalizados.</p>
+                    <button class="service-btn">Crear CV</button>
+                </div>
+
+                <div class="service-card" onclick="openModal('entrevista')">
+                    <div class="service-icon">
+                        <i class="fas fa-microphone"></i>
+                    </div>
+                    <h3>Simulador de Entrevistas</h3>
+                    <p>Practica entrevistas de trabajo con feedback inteligente y consejos personalizados.</p>
+                    <button class="service-btn">Practicar</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section id="cursos" class="courses">
+        <div class="container">
+            <h2 class="section-title">Cursos Destacados</h2>
+            <div class="courses-grid">
+                <div class="course-card">
+                    <div class="course-image">
+                        <i class="fab fa-html5"></i>
+                    </div>
+                    <div class="course-content">
+                        <h3>Desarrollo Web Frontend</h3>
+                        <p>Aprende HTML, CSS y JavaScript desde cero</p>
+                        <div class="course-meta">
+                            <span><i class="fas fa-clock"></i> 40 horas</span>
+                            <span><i class="fas fa-users"></i> 1,250 estudiantes</span>
+                        </div>
+                        <button class="course-btn">Comenzar Curso</button>
+                    </div>
+                </div>
+
+                <div class="course-card">
+                    <div class="course-image">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="course-content">
+                        <h3>Marketing Digital</h3>
+                        <p>Estrategias de marketing para el mundo digital</p>
+                        <div class="course-meta">
+                            <span><i class="fas fa-clock"></i> 30 horas</span>
+                            <span><i class="fas fa-users"></i> 980 estudiantes</span>
+                        </div>
+                        <button class="course-btn">Comenzar Curso</button>
+                    </div>
+                </div>
+
+                <div class="course-card">
+                    <div class="course-image">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <div class="course-content">
+                        <h3>Habilidades Blandas</h3>
+                        <p>Comunicación, liderazgo y trabajo en equipo</p>
+                        <div class="course-meta">
+                            <span><i class="fas fa-clock"></i> 25 horas</span>
+                            <span><i class="fas fa-users"></i> 2,150 estudiantes</span>
+                        </div>
+                        <button class="course-btn">Comenzar Curso</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonios" class="testimonials">
+        <div class="container">
+            <h2 class="section-title">Historias de Éxito</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"Gracias a FuturoLaboral descubrí mi pasión por el desarrollo web. Hoy trabajo en una startup y estoy muy feliz con mi elección."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="author-info">
+                            <h4>María González</h4>
+                            <span>Frontend Developer - 22 años</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"El simulador de entrevistas me ayudó muchísimo. Llegué súper preparado y conseguí mi primer trabajo en marketing digital."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="author-info">
+                            <h4>Carlos Mendez</h4>
+                            <span>Marketing Specialist - 24 años</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"La orientación vocacional me abrió los ojos. Ahora estudio diseño gráfico y trabajo freelance mientras termino mi carrera."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="author-info">
+                            <h4>Ana Rodríguez</h4>
+                            <span>Diseñadora Gráfica - 20 años</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="contact">
+        <div class="container">
+            <h2 class="section-title">¿Tienes preguntas?</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Contáctanos</h3>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>info@futurolaboral.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+54 11 1234-5678</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Buenos Aires, Argentina</span>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="nombre" placeholder="Tu nombre" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" placeholder="Tu email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="mensaje" placeholder="Tu mensaje" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-rocket"></i>
+                        <span>FuturoLaboral</span>
+                    </div>
+                    <p>Conectando jóvenes con oportunidades laborales</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Enlaces</h4>
+                    <ul>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#servicios">Servicios</a></li>
+                        <li><a href="#cursos">Cursos</a></li>
+                        <li><a href="#testimonios">Testimonios</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Síguenos</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 FuturoLaboral. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modals -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <!-- Chat Bot -->
+    <div id="chatbot" class="chatbot">
+        <div class="chatbot-header">
+            <h4><i class="fas fa-robot"></i> Asistente IA</h4>
+            <button id="closeChatbot">&times;</button>
+        </div>
+        <div class="chatbot-messages" id="chatMessages">
+            <div class="bot-message">
+                <p>¡Hola! Soy tu asistente de orientación vocacional. ¿En qué puedo ayudarte hoy?</p>
+            </div>
+        </div>
+        <div class="chatbot-input">
+            <input type="text" id="userInput" placeholder="Escribe tu pregunta...">
+            <button id="sendMessage"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+
+    <button id="openChatbot" class="chatbot-toggle">
+        <i class="fas fa-comments"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
