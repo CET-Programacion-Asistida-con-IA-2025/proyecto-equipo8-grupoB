@@ -1471,4 +1471,363 @@ p, span, div {
     }
 }
 
-.
+/* 🎀 Estilos para Test de Orientación Vocacional 🎀 */
+.orientation-content {
+  padding: 2rem;
+  background: var(--white);
+  border-radius: 20px;
+  box-shadow: var(--shadow-lg);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.orientation-content h2 {
+  color: var(--accent-color);
+  margin-bottom: 1rem;
+}
+
+.orientation-content p {
+  color: var(--text-dark);
+  margin-bottom: 1.5rem;
+}
+
+.orientation-content .options {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.orientation-content .options label {
+  display: block;
+  border: 2px solid var(--primary-color);
+  border-radius: 12px;
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s, border-color 0.3s;
+  color: var(--text-dark);
+}
+
+.orientation-content .options label.selected,
+.orientation-content .options label:hover {
+  background: var(--primary-color);
+  border-color: var(--primary-color);
+  color: var(--white);
+}
+
+.orientation-content .options input[type="radio"] {
+  display: none;
+}
+
+.orientation-content .test-navigation {
+  margin-top: 1.5rem;
+}
+
+.orientation-content .test-navigation button {
+  background: var(--gradient);
+  color: var(--white);
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.2s;
+  margin-right: 0.5rem;
+  box-shadow: var(--shadow);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.orientation-content .test-navigation button:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+/* 🎀 Estilos para Generador de CV 🎀 */
+.cv-builder {
+  padding: 2rem;
+  background: var(--white);
+  border-radius: 20px;
+  box-shadow: var(--shadow-lg);
+  max-width: 800px;
+  margin: 2rem auto; /* ⬅️ Aquí el cambio: antes estaba "0 auto" */
+}
+
+.cv-builder h2 {
+  color: var(--accent-color);
+  margin-bottom: 1rem;
+}
+
+.cv-steps {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.cv-steps .step {
+  flex: 1;
+  text-align: center;
+  padding: 0.5rem;
+  border-bottom: 2px solid var(--text-light);
+  font-weight: 600;
+  color: var(--text-light);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.cv-steps .step.active {
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.cv-form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.cv-form .step-content {
+  display: none;
+}
+
+.cv-form .step-content.active {
+  display: block;
+}
+
+.cv-form .form-row {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.cv-form input,
+.cv-form textarea {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-family: var(--font-primary);
+  transition: all 0.3s;
+}
+
+.cv-form input:focus,
+.cv-form textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(224, 164, 175, 0.2);
+}
+
+.cv-form textarea {
+  resize: none;
+}
+
+.cv-form .add-btn,
+.cv-form .remove-btn {
+  background: var(--gradient);
+  color: var(--white);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.85rem;
+  margin-top: 0.5rem;
+  transition: opacity 0.3s;
+}
+
+.cv-form .add-btn:hover,
+.cv-form .remove-btn:hover {
+  opacity: 0.9;
+}
+
+.cv-navigation {
+  text-align: right;
+  margin-top: 1rem;
+}
+
+.cv-navigation button {
+  background: var(--gradient);
+  color: var(--white);
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.2s;
+  margin-left: 0.5rem;
+  box-shadow: var(--shadow);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.cv-navigation button:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+/* 🎀 Estilo para CV Generado 🎀 */
+.generated-cv {
+  background: var(--white);
+  border-radius: 20px;
+  box-shadow: var(--shadow-lg);
+  padding: 2rem;
+  max-width: 800px;
+  margin: 2rem auto;
+  font-family: var(--font-primary);
+}
+
+.generated-cv h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--accent-color);
+  margin-bottom: 1rem;
+}
+
+.generated-cv h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin: 0.5rem 0;
+}
+
+.generated-cv p {
+  margin: 0.5rem 0;
+  color: var(--text-light);
+  line-height: 1.5;
+}
+
+.generated-cv .cv-preview {
+  margin-top: 1.5rem;
+}
+
+.generated-cv .cv-header {
+  border-bottom: 1px solid #eee;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+}
+
+.generated-cv .cv-header .contact-info {
+  font-size: 0.9rem;
+  color: var(--text-light);
+}
+
+.generated-cv .cv-section {
+  margin-top: 1rem;
+}
+
+.generated-cv .cv-section h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.generated-cv .cv-section .cv-item {
+  margin-bottom: 1rem;
+}
+
+.generated-cv .cv-section .cv-item h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--accent-color);
+  margin-bottom: 0.25rem;
+}
+
+.generated-cv .cv-section .cv-item p {
+  margin: 0.25rem 0;
+  font-size: 0.95rem;
+  color: var(--text-dark);
+}
+
+.generated-cv .skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.generated-cv .skills-list .skill-item {
+  background: var(--gradient);
+  color: var(--white);
+  padding: 0.3rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.85rem;
+}
+
+.generated-cv .cv-actions {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.generated-cv .cv-actions button {
+  background: var(--gradient);
+  color: var(--white);
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.generated-cv .cv-actions button:hover {
+  opacity: 0.9;
+}
+
+.modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.modal-content {
+  max-width: 900px;
+  width: 100%;
+  background: var(--white);
+  border-radius: 20px;
+  box-shadow: var(--shadow-lg);
+  padding: 2rem;
+  overflow-y: auto;
+  max-height: 90vh;
+}
+
+
+
+
+/* 🎀 Mejora general para todos los modales */
+.modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.modal-content,
+.orientation-content,
+.cv-builder,
+.interview-simulator {
+  background: var(--white);
+  border-radius: 20px;
+  box-shadow: var(--shadow-lg);
+  padding: 2rem;
+  max-width: 900px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  font-family: var(--font-primary);
+}
+
+.orientation-content h2,
+.cv-builder h2,
+.interview-simulator h2 {
+  color: var(--accent-color);
+  margin-bottom: 1rem;
+}
+
+
+.hidden {
+    display: none !important;
+}

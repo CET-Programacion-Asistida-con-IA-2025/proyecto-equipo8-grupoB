@@ -62,17 +62,17 @@ function initializeApp() {
 function setupEventListeners() {
     // Mobile menu toggle
     hamburger.addEventListener('click', toggleMobileMenu);
-    
-    // Modal events
+
     closeModal.addEventListener('click', () => {
-        modal.style.display = 'none';
-    });
-    
-    window.addEventListener('click', (e) => {
-        if (e.target === modal) {
-            modal.style.display = 'none';
-        }
-    });
+    modal.classList.add('hidden');
+});
+
+window.addEventListener('click', (e) => {
+    if (e.target === modal) {
+        modal.classList.add('hidden');
+    }
+});
+
 
     // Chatbot events
     openChatbot.addEventListener('click', () => {
@@ -124,7 +124,8 @@ function openModal(type) {
     }
     
     modalBody.innerHTML = content;
-    modal.style.display = 'block';
+    modal.classList.remove('hidden');
+
     
     // Setup modal-specific event listeners
     setupModalEvents(type);
@@ -533,6 +534,20 @@ function setupOrientationTest() {
         submitBtn.style.display = n === questions.length - 1 ? 'inline-block' : 'none';
     }
     
+    // Dentro de setupOrientationTest(), justo después de definir prevBtn, nextBtn y submitBtn:
+    const allLabels = document.querySelectorAll('.options label');
+    allLabels.forEach(label => {
+    label.addEventListener('click', () => {
+        // Limpiamos todas las opciones del mismo grupo
+        const parent = label.closest('.options');
+        parent.querySelectorAll('label').forEach(l => l.classList.remove('selected'));
+        // Marcamos la que seleccionaste
+        label.classList.add('selected');
+    });
+    });
+
+
+
     nextBtn.addEventListener('click', () => {
         const currentRadio = questions[currentQuestion].querySelector('input[type="radio"]:checked');
         if (currentRadio) {
@@ -1840,5 +1855,21 @@ document.addEventListener('DOMContentLoaded', function() {
             addMessageToChat('ai', '¡Hola! Soy tu asistente de carrera. Haz clic en el botón de chat cuando necesites ayuda. 👋');
         }
     }, 3000);
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const courseBtns = document.querySelectorAll('.courses-grid .course-btn');
+
+    const urls = [
+        'https://www.codecademy.com/catalog/subject/web-development',
+        'https://www.edutin.com/cursos-gratis',
+        'https://www.edx.org/learn/design'
+    ];
+
+    courseBtns.forEach((btn, i) => {
+        btn.addEventListener('click', () => {
+            window.open(urls[i], '_blank');
+        });
+    });
 });
 
