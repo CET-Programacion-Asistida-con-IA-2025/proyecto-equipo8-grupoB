@@ -392,6 +392,54 @@ function getCVContent() {
     `;
 }
 
+// Abrir y cerrar el modal
+function openModalCV() {
+  document.getElementById("modalCV").style.display = "block";
+}
+function cerrarModalCV() {
+  document.getElementById("modalCV").style.display = "none";
+}
+
+// Generar vista previa del CV
+function generarVistaPrevia() {
+  const nombre = document.getElementById("nombre").value;
+  const email = document.getElementById("email").value;
+  const tel = document.getElementById("telefono").value;
+  const direccion = document.getElementById("direccion").value;
+  const perfil = document.getElementById("perfil").value;
+  const educacion = document.getElementById("educacion").value;
+  const experiencia = document.getElementById("experiencia").value;
+  const habilidades = document.getElementById("habilidades").value;
+  const estilo = document.getElementById("estilo").value;
+
+  const cvHTML = `
+    <h2>${nombre}</h2>
+    <div><strong>Email:</strong> ${email}</div>
+    <div><strong>Teléfono:</strong> ${tel}</div>
+    <div><strong>Dirección:</strong> ${direccion}</div>
+    <div><strong>Perfil:</strong><br>${perfil}</div>
+    <div><strong>Educación:</strong><br>${educacion}</div>
+    <div><strong>Experiencia / Cursos:</strong><br>${experiencia}</div>
+    <div><strong>Habilidades:</strong><br>${habilidades}</div>
+  `;
+
+  const preview = document.getElementById("cvPreview");
+  preview.innerHTML = cvHTML;
+  preview.className = "cv-preview " + estilo;
+}
+
+// Descargar el CV en PDF
+function descargarPDF() {
+  const element = document.getElementById("cvPreview");
+  html2pdf().set({
+    margin: 0.5,
+    filename: 'CV_personalizado.pdf',
+    image: { type: 'jpeg', quality: 0.98 },
+    html2canvas: { scale: 2 },
+    jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+  }).from(element).save();
+}
+
 // Interview Content
 function getEntrevistaContent() {
     return `

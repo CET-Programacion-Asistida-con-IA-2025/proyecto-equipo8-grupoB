@@ -57,5 +57,16 @@ Este proyecto fue desarrollado en el marco del curso **Programación Asistida co
 
 
 # Entrega #2 (Final): 
+## Funcionalidades principales
+
+- **Creación y mejora de CV:** 
+  - Plantillas editables y consejos adaptados a quienes no tienen experiencia laboral.
+  - Opción de descargar el CV en formato PDF.
+  - Vista previa del CV completado, con posibilidad de elegir entre tres esquemas de color predeterminados.
+
+## Tecnologías usadas
+- HTML
+- CCS
+- JavaScript
 
 se esperan modificaciones en el código respecto a la entrega anterior, que pueden incluir nuevos archivos o extensión de los existentes (debe haber al menos un archivo de cada lenguaje visto - HTML, CSS y Javascript)
